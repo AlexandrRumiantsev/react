@@ -1,0 +1,37 @@
+.title-page{
+	font-size: 21px;
+	text-align: center;
+}
+.logo-in-header{
+	width:150px;
+}
+.tel{
+	float:right;
+}
+.product-item{
+	border-radius: 10px;
+	display: block;
+    float: left;
+    background: red;
+    width: 30%;
+    height: 330px;
+    padding: 5px;
+    text-align: center;
+    margin:10px;
+}
+
+.img-item{
+	    max-width: 275px;
+	    max-height: 275px;
+}
+.title-product{
+	background: white;
+	padding: 5px;
+
+}
+
+.title-footer{
+	display: block;
+	float: left;
+	margin-bottom: 0px !important;padding-bottom: 0 !important;margin-top: 0!important;
+}

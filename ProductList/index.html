@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hello React</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" href="./DottedBox.css">
+</head>
+<body>
+    <div style={[styles.header]} id="header"></div>
+    <div style={[styles.body]} id="container"></div>
+    <div style={[styles.footer]} id="footer"></div>
+      
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+   <script type="text/babel">
+  
+        const styles = {
+          header:{
+            h1:{color:'red',},
+            color:'red',
+          },
+          body:{
+            fontSize:'18px',
+          },
+          footer:{
+            fontSize:'16px',
+          },
+          productBlock:{
+            fontSize:'14px',
+            color:'gray',
+         },
+         imgLogo:{
+         width:'150px',
+         height:'150px',
+       },
+       Slogan:{
+       fontSize:'18px',
+     }
+   };
+
+       //Шапка сайта
+        ReactDOM.render(
+            <div class='container'>
+               
+               <img class='logo-in-header' src='./logo.png'/>
+               <span class='title-page'>ООО "Интернет магазин"</span>
+            </div>, 
+            document.getElementById("header")
+        );
+
+        //Тело сайта
+        ReactDOM.render(
+        <div class='container'>
+            <div style={[styles.productBlock]}>
+                <h2>Наши продукты</h2>
+                <div>
+                    <span class='product-item'>
+                      <p class='title-product'>iPhone 7</p>
+                      <img class='img-item' src="https://switch.com.my/wp-content/uploads/2017/11/iphone7_black.png"/>
+                    </span>
+                    <span class='product-item'>
+                      <p class='title-product'>Samsung Galaxy A5</p>
+                    <img class='img-item' src="https://images.ua.prom.st/835852649_w0_h0_cid2314961_pid554594449-51604d68.png"/>
+                    </span>
+                    <span class='product-item'>
+                      <p class='title-product'>HTC U Ultra</p>
+                      <img class='img-item' src="https://rewagg.com/wp-content/uploads/2017/05/HTC-U-Ultra-White-Front.png"/>
+                    </span>
+                    <span class='product-item'>
+                      <p class='title-product'>Pixel XL</p>
+                      <img class='img-item' src="https://1click.ru/upload/iblock/1b0/1b0f0d26f36899b78c9a3e27ce00adda.png"/>
+                    </span>
+                </div>
+            </div>
+        </div>,
+            document.getElementById("container"),
+            function(){ console.log("рендеринг элемента React");}
+        );
+    </script>
+</body>
+</html>
+
